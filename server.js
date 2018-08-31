@@ -66,12 +66,16 @@ app.get('/',(req, res) => {             //registering a handler for a http get r
   });
 });
 
-
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Portfolio page'
+  });
+});
 
 app.get('/about', (req, res) => {
   // res.send('About page');
   res.render('about.hbs', {
-    pageTitle: 'About page',
+    pageTitle: 'About page'
   });
 });
 
